@@ -10,3 +10,8 @@
     border-bottom: 1px solid #48cfad;
   }
 }
+
+.mask p
+{
+  color: white;
+}

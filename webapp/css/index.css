@@ -1,0 +1,12 @@
+
+@media screen and (min-width: 1224px){
+  .navbar-static-top
+  {
+    position: fixed;
+    margin: 0px 0px 0px px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+    border-bottom: 1px solid #48cfad;
+  }
+}

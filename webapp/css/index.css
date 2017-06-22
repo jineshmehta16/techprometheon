@@ -1,17 +1,29 @@
 
-@media screen and (min-width: 1224px){
-  .navbar-static-top
-  {
-    position: fixed;
-    margin: 0px 0px 0px px;
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 100%;
-    border-bottom: 1px solid #48cfad;
-  }
-}
 
 .mask p
 {
   color: white;
+  margin-bottom: 0px;
+
+}
+
+.mask .offering-heading
+{
+    padding: 3px;
+    font-weight: bold;
+}
+
+.mask .offering-description
+{
+  text-align: left;
+  padding: 10px;
+}
+.view-tenth
+{
+    height: 17.75em;
+}
+
+#owl-demo .item img
+{
+  height: 17.75em;
 }

@@ -8,6 +8,11 @@
     width: 100%;
     border-bottom: 1px solid #48cfad;
   }
+
+  .head-section
+  {
+      margin-bottom: 95px;
+  }
 }
 
 .terms-cond

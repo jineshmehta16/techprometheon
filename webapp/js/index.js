@@ -4,10 +4,24 @@ app.controller('myCtrl', function($scope) {
     
     $scope.animateDown = function(type)
     {
-        console.log('heyyyyyy');
-         $("body, html").animate({ 
-            scrollTop: $( $(this).attr('href') ).offset().top 
-        }, 600);
+        switch(type) 
+        {
+                case 'Product':
+                    $('html, body').animate({ scrollTop: 600 }, 1200);
+                    break;
+                case 'Offering':
+                    $('html, body').animate({ scrollTop: 920 }, 1200);
+                    break;
+                case 'Faq':
+                    $('html, body').animate({ scrollTop: 1420 }, 1200);
+                    break;
+                case 'Service':
+                    $('html, body').animate({ scrollTop: 1900 }, 1200);
+                     break;
+                case 'Contact':
+                    $('html, body').animate({ scrollTop: 600 }, 1200);
+                    break;
+        }
     }
 
 });

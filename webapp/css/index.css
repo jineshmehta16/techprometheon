@@ -48,13 +48,7 @@
     background: url(../../img/seq-slider/bg-sky.png) repeat-x #c967e8;
   }
 
-    #sequence .balloon {
-    left: -120%;
-    top: 150px;
-    max-width: 40%;
-    z-index: 6;
-    -webkit-transition-property: left top;
-    -moz-transition-property: left top;
-    -ms-transition-property: left top;
-    -o-transition-property: left top;
-    transition-property: left top; }
+  .nav li
+  {
+    cursor: pointer;
+  }

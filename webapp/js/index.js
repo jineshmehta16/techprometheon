@@ -6,21 +6,22 @@ app.controller('myCtrl', function($scope) {
     {
         switch(type) 
         {
-                case 'Product':
+                case 'About':
                     $('html, body').animate({ scrollTop: 600 }, 1200);
+                    break;
+                case 'Product':
+                    $('html, body').animate({ scrollTop: 850 }, 1200);
                     break;
                 case 'Offering':
-                    $('html, body').animate({ scrollTop: 920 }, 1200);
+                    $('html, body').animate({ scrollTop: 1150 }, 1200);
                     break;
                 case 'Faq':
-                    $('html, body').animate({ scrollTop: 1420 }, 1200);
+                    $('html, body').animate({ scrollTop: 1650 }, 1200);
                     break;
                 case 'Service':
-                    $('html, body').animate({ scrollTop: 1900 }, 1200);
+                    $('html, body').animate({ scrollTop: 2100 }, 1200);
                      break;
-                case 'Contact':
-                    $('html, body').animate({ scrollTop: 600 }, 1200);
-                    break;
+
         }
     }
 

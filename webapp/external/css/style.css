@@ -1465,7 +1465,7 @@ a.btn-purchase {
     text-transform: uppercase;
     border-radius: 4px;
     -webkit-border-radius: 4px;
-    -moz-border-radius: 4px padding: 20px 40px;
+    -moz-border-radius: 4px; padding: 20px 40px;
     margin-top: 30px;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -1789,7 +1789,7 @@ ul#filters > .active > span {
     border: 1px solid #d9d9d9;
 }
 .input-group-addon {
-    border: border: 1px solid #d9d9d9;
+    border: 1px solid #d9d9d9;
     border-radius: 1px;
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;

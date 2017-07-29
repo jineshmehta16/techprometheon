@@ -9,7 +9,7 @@
 
 .mask .offering-heading
 {
-    padding: 3px;
+    padding: 10px;
     font-weight: bold;
 }
 
@@ -48,7 +48,19 @@
     background: url(../../img/seq-slider/bg-sky.png) repeat-x #c967e8;
   }
 
+  .mask .info
+  {
+    margin: 2px;
+  }
+
   .nav li
   {
     cursor: pointer;
+  }
+
+
+  .mainImage
+  {
+    height: 570px;
+    width: 100%;
   }

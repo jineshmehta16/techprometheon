@@ -11,6 +11,7 @@
     <title>
       Techprometheon | Contact
     </title>
+    <link rel="shortcut icon" href="../asset/images/logo.png">
 
     <!-- Bootstrap core CSS -->
     <link href="../external/css/bootstrap.min.css" rel="stylesheet">
@@ -23,10 +24,13 @@
     <link rel="stylesheet" type="text/css" href="../external/css/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
 
     <!-- Custom styles for this template -->
     <link href="../external/css/style.css" rel="stylesheet">
     <link href="../external/css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/contact.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -40,7 +44,7 @@
 
   </head>
 
-  <body>
+  <body ng-app="contactApp" ng-controller="contactCtrl">
     <!--header start-->
     <header class="head-section">
       <div class="navbar navbar-default navbar-static-top">
@@ -50,27 +54,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">Tech <span>Prometheon</span></a>
+               <a href="../index.html"><img src="../asset/images/logo.png" class="logo" alt="Logo">
+                <a class="navbar-brand nav-logo" href="../index.html">Tech <span>Prometheon</span>
+                </a>
+              </a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="index.html">Products</a>
+                    <a href="../index.html">Home</a>
                 </li>
                 <li>
-                    <a href="index.html">Offerings</a>
+                    <a href="../index.html">Product</a>
+                </li>
+                <li>
+                    <a href="../index.html">Offerings</a>
                 </li>
                 <li>
                     <a href="faq.html">Support/FAQ</a>
                 </li>
                 <li>
-                    <a href="index.html">Services</a>
-                </li>
-                <li>
-                    <a href="index.html">Blogs</a>
-                </li>
-                <li>
-                    <a href="html/contact.html">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
             </ul>
@@ -91,7 +95,7 @@
           <div class="col-lg-8 col-sm-8">
             <ol class="breadcrumb pull-right">
               <li>
-                <a href="#">
+                <a href="../index.html">
                   Home
                 </a>
               </li>
@@ -114,23 +118,21 @@
               ADDRESS
             </h4>
             <address>
-              MG Road , Mumbai
+              08, Sara Residency,
               <br>
-              Pune , Maharashtra
+              Behind Balewadi Stadium Hostels ,
               <br>
-              Maharashtra
+              Pune, Maharashtra-411045, India
             </address>
           </section>
           <section class="contact-infos">
             <h4 class="title custom-font text-black">
-              BUSINESS HOURS
+              Mailing Contact
             </h4>
             <p>
-              Monday - Friday 8am to 4pm
+              techprometheon@gmail.com
               <br>
-              Saturday - 7am to 6pm
-              <br>
-              Sunday- Closed
+              enquiry@techprometheon.com
               <br>
             </p>
           </section>
@@ -157,35 +159,45 @@
             Drop us a line so that we can hear from you
           </h4>
           <div class="contact-form">
-            <form role="form">
+            <form role="form" name="contactForm">
               <div class="form-group">
-                <label for="name">
-                  Name
-                </label>
-                <input type="text" placeholder="" id="name" class="form-control">
+                <label for="name">Name*</label>
+              <input type="text" name="name" ng-model="name"  class="form-control" required>
+              <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
+              <span ng-show="contactForm.name.$error.required">Username is required.</span>
+              </span>
               </div>
-              <div class="form-group">
-                <label for="email">
-                  Email
-                </label>
-                <input type="text" placeholder="" id="email" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="phone">
-                  Phone
-                </label>
-                <input type="text" id="phone" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="phone">
-                  Message
-                </label>
-                <textarea placeholder="" rows="5" class="form-control">
-                </textarea>
-              </div>
-              <button class="btn btn-info" type="submit">
-                Submit
-              </button>
+            <div class="form-group">
+               <label for="email">Email*</label>
+              <input class="form-control" type="email" name="email" ng-model="email" required>
+              <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">	
+              <span ng-show="contactForm.email.$error.required">Email is required.</span>
+              <span ng-show="contactForm.email.$error.email">Invalid email address.</span>
+              </span>
+            </div>
+            
+            <div class="form-group">
+               <label for="phone">Phone*</label>
+              <input class="form-control" type="number" name="number" ng-model="number" required>
+              <span style="color:red" ng-show="contactForm.number.$dirty && contactForm.number.$invalid">	
+              <span ng-show="contactForm.number.$error.required">Number is required.</span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="message">
+                Message*
+              </label>
+              <textarea placeholder="" rows="5" name="message" ng-model="message" class="form-control" required>
+              </textarea>
+              <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">	
+              <span ng-show="contactForm.message.$error.required">Message is required.</span>
+              </span>
+            </div>
+              <input style="width: 20%" ng-disabled="contactForm.name.$dirty && contactForm.name.$invalid ||
+                                  contactForm.email.$dirty && contactForm.email.$invalid ||
+                                  contactForm.message.$dirty && contactForm.message.$invalid ||
+                                  contactForm.number.$dirty && contactForm.number.$invalid"
+                                   class="btn btn-info" type="submit" ng-click="onSubmitContact()">
             </form>
 
           </div>
@@ -194,14 +206,6 @@
 
     </div>
     <!--container Ends here-->
-
-    <!--google map start-->
-    <div class="contact-map">
-      <div id="map-canvas" style="width: 100%; height: 400px">
-      </div>
-    </div>
-    <!--google map end-->
-
 
     <!--footer start-->
     <footer class="footer">
@@ -270,8 +274,8 @@ By accessing the website, you confirm your acceptance to privacy policy.
     </script>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false">
-    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false">
+    </script> -->
 
     <!--common script for all pages-->
     <script src="../external/js/common-scripts.js">
@@ -301,23 +305,23 @@ By accessing the website, you confirm your acceptance to privacy policy.
       }
                        );
 
-      //google map
-      function initialize() {
-        var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
-        var mapOptions = {
-          zoom: 5,
-          center: myLatlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          title: 'Contact'
-        }
-                                           );
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+      // //google map
+      // function initialize() {
+      //   var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
+      //   var mapOptions = {
+      //     zoom: 5,
+      //     center: myLatlng,
+      //     mapTypeId: google.maps.MapTypeId.ROADMAP
+      //   }
+      //       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      //   var marker = new google.maps.Marker({
+      //     position: myLatlng,
+      //     map: map,
+      //     title: 'Contact'
+      //   }
+      //                                      );
+      // }
+      // google.maps.event.addDomListener(window, 'load', initialize);
 
 
 

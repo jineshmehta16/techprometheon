@@ -23,3 +23,47 @@
 .page-footer {
     padding: 0% 1%;
 }
+
+
+  .logo
+  {
+    width: 95px;
+    height: 95px;
+    padding: 4px;
+  }
+
+  input.ng-invalid 
+  {
+    border-color: pink;
+  }
+  input.ng-valid 
+  {
+    border-color: lightgreen;
+  }
+
+  textarea.ng-invalid 
+  {
+    border-color: pink;
+  }
+  textarea.ng-valid 
+  {
+    border-color: lightgreen;
+  }
+
+  input
+  {
+    width: 100%; 
+  }
+
+    /* Desktops and laptops ---------- */
+  @media screen and (min-width: 1224px)
+  {
+    .nav-logo
+    {
+        position: absolute;
+        top: 29px;
+        left: 133px;
+        font-size: 19px;
+    }
+  }
+

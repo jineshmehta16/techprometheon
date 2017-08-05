@@ -1,0 +1,123 @@
+.instereo-video
+{
+    width: 100%;
+    
+}
+
+
+    /* Desktops and laptops ---------- */
+  @media screen and (min-width: 1223px)
+  {
+        .data-on-video
+        {
+            position: absolute;
+            color: white;
+            top: 70px;
+            width: 100%;
+        }
+
+        .video
+        {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .instereo-img
+        {
+            width: 160px;
+            margin-left: 125px;
+        }
+
+        .sub-title
+        {
+            padding-top: 4em;
+            font-size: 15px;
+            font-weight: bold;
+            padding-top: 350px;
+        }
+
+        .title-instereo
+        {
+            font-size: 32px;
+            font-weight: bolder;
+        }
+
+        .title-sub
+        {
+            font-size: 24px;
+        }
+
+        .wrapper
+        {
+            width: 100%;
+            position: absolute;
+            height: 845px;
+            background: #48cfad;
+            top: 92px;
+            opacity: 0.75;
+        }
+
+        .wrapper-mobile
+        {
+            display: none;
+        }
+        .mob-view
+        {
+            display: none;
+        }
+  }
+
+   /* Smartphones (landscape) ---------- */
+@media screen and (min-width: 319px) and (max-width: 1022px)
+{
+        .wrapper
+        {
+           display: none;
+        }
+
+        .wrapper-mobile
+        {
+            position: absolute;
+            top: 275px;
+            margin: auto;
+        }
+
+        .logo-instereo
+        {
+            width: 75px
+        }
+
+         /* .title-instereo
+        {
+            padding-left: 54px;
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+        .title-sub
+        {
+            padding-left: 25px;
+            font-size: 17px;
+        }
+
+
+        .data-on-video
+        {
+            position: absolute;
+            color: white;
+            top: 138px;
+            width: 100%;
+        }
+        .instereo-img
+        {
+            width: 74px;
+            margin-left: 87px;
+        }
+
+        .sub-title
+        {
+            margin-top: 148px;
+            font-size: 15px;
+            font-weight: bold;
+        } */
+}

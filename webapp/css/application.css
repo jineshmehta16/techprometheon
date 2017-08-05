@@ -55,6 +55,26 @@
     width: 100%; 
   }
 
+  .allign-center
+    {
+        text-align: center;    
+    }
+
+    .allign-right
+    {
+        text-align: right;    
+    }
+
+    .error
+    {
+      color: red;
+    }
+
+    .success
+    {
+      color: green;
+    }
+
     /* Desktops and laptops ---------- */
   @media screen and (min-width: 1224px)
   {
@@ -65,5 +85,28 @@
         left: 133px;
         font-size: 19px;
     }
+  
+    
   }
+
+  /* Smartphones (landscape) ---------- */
+@media screen and (min-width: 319px) and (max-width: 1022px)
+{
+  .nav-logo
+    {
+      display: none;
+    }
+
+    .navbar-toggle
+    {
+      margin-right: 20px; 
+    }
+
+    .logo
+    {
+        float: left;
+    }
+}
+
+
 

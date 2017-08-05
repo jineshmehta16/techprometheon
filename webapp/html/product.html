@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <title>
-      Techprometheon | Contact
+      Techprometheon | Instereo
     </title>
     <link rel="shortcut icon" href="../asset/images/logo.png">
 
@@ -40,11 +40,15 @@
 </script>
 <![endif]-->
 
+      <script type="text/javascript" src="../js/product.js"></script>
+
+
     <link rel="stylesheet" href="../css/application.css">
+    <link rel="stylesheet" href="../css/product.css">
 
   </head>
 
-  <body ng-app="contactApp" ng-controller="contactCtrl">
+  <body ng-app="productApp" ng-controller="productCtrl">
     <!--header start-->
     <header class="head-section">
       <div class="navbar navbar-default navbar-static-top">
@@ -84,12 +88,12 @@
     <!-- header ends -->
 
     <!--breadcrumbs start-->
-    <div class="breadcrumbs">
+    <!-- <div class="breadcrumbs">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-sm-4">
             <h1>
-              Contacts
+              Instereo
             </h1>
           </div>
           <div class="col-lg-8 col-sm-8">
@@ -100,113 +104,65 @@
                 </a>
               </li>
               <li class="active">
-                Contacts
+                Instereo
               </li>
             </ol>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--breadcrumbs end-->
-
-    <!--container start-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-sm-5 address">
-          <section class="contact-infos">
-            <h4 class="title custom-font text-black">
-              ADDRESS
-            </h4>
-            <address>
-              08, Sara Residency,
-              <br>
-              Behind Balewadi Stadium Hostels ,
-              <br>
-              Pune, Maharashtra-411045, India
-            </address>
-          </section>
-          <section class="contact-infos">
-            <h4 class="title custom-font text-black">
-              Mailing Contact
-            </h4>
-            <p>
-              techprometheon@gmail.com
-              <br>
-              enquiry@techprometheon.com
-              <br>
-            </p>
-          </section>
-          <section class="contact-infos">
-            <h4>
-              TELEPHONE
-            </h4>
-            <p>
-              <i class="icon-phone">
-              </i>
-              +91 7506218227
-            </p>
-
-            <p>
-              <i class="icon-phone">
-              </i>
-              +91 7506218227
-            </p>
-
-          </section>
+    
+    <div class="container-fluid">
+        <div class="row video">
+            <video loop class="instereo-video" autoplay muted>
+                <source src="../asset/videos/InstereoAR_Product Page Home.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="col-lg-7 col-sm-7 address">
-          <h4>
-            Drop us a line so that we can hear from you
-          </h4>
-          <div class="contact-form">
-            <form role="form" name="contactForm">
-              <div class="form-group">
-                <label for="name">Name*</label>
-              <input type="text" name="name" ng-model="name"  class="form-control" required>
-              <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
-              <span ng-show="contactForm.name.$error.required">Username is required.</span>
-              </span>
-              </div>
-            <div class="form-group">
-               <label for="email">Email*</label>
-              <input class="form-control" type="email" name="email" ng-model="email" required>
-              <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">	
-              <span ng-show="contactForm.email.$error.required">Email is required.</span>
-              <span ng-show="contactForm.email.$error.email">Invalid email address.</span>
-              </span>
+          <div class="wrapper">
+            <div class="data-on-video row">
+                <div class="col-md-4">
+                  <img class="phone" src="../asset/images/phone.png">
+                </div>
+                <div class="col-md-4">
+                  <img class="instereo-img" src="../asset/images/instereo_png.png">
+                  <h3 class="allign-center title-instereo">instereoAR</h3>
+                  <h5 class="allign-center title-sub">An augmented reality App!</h5>
+                </div>
+                <div class="col-md-4">
+                </div>
             </div>
-            
-            <div class="form-group">
-               <label for="phone">Phone*</label>
-              <input class="form-control" type="number" name="number" ng-model="number" required>
-              <span style="color:red" ng-show="contactForm.number.$dirty && contactForm.number.$invalid">	
-              <span ng-show="contactForm.number.$error.required">Number is required.</span>
-              </span>
+            <div class="row data-on-video">  
+                <div class="col-md-8">
+                </div>
+                <div class="col-md-4">
+                  <p class="sub-title">- Get going with the InstereoAR app and <br>Explore what more the world arround you is offering.</p>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="message">
-                Message*
-              </label>
-              <textarea placeholder="" rows="5" name="message" ng-model="message" class="form-control" required>
-              </textarea>
-              <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">	
-              <span ng-show="contactForm.message.$error.required">Message is required.</span>
-              </span>
-            </div>
-              <input style="width: 20%" ng-disabled="contactForm.name.$dirty && contactForm.name.$invalid ||
-                                  contactForm.email.$dirty && contactForm.email.$invalid ||
-                                  contactForm.message.$dirty && contactForm.message.$invalid ||
-                                  contactForm.number.$dirty && contactForm.number.$invalid"
-                                   class="btn btn-info" type="submit" ng-click="onSubmitContact()">
-              <span class={{messageClass}}>{{errorMessage}}</span>
-            </form>
-
           </div>
-        </div>
-      </div>
+          <div class="wrapper-mobile">
+            <button type="button" ng-click="scrollDown()" class="btn btn-primary read-more">
+              <span class="glyphicon glyphicon-chevron-down"></span> Read More
+            </button>
+          </div>
 
+    </div>    
+
+    <div class="container mob-view">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <h3 class="">instereoAR</h3>
+              <img class="logo-instereo" src="../asset/images/instereo_png.png">
+              <h5 class="">An augmented reality App!</h5>
+              <p>
+                Instereo AR has been channelized in Indian advertising space by creative and tech genius team at Tech Prometheon pvt ltd.
+              </p>
+              <p>
+                With Instereo AR app you can create wow experience for your customer by showing engaging content like AR games, 2D/3D animations and visuals on printed media.You can create interactive and imenssive environment for your users which lead to brand visibility.
+              </p>
+            </div>
+        </div>
     </div>
-    <!--container Ends here-->
 
     <!--footer start-->
     <footer class="footer">
@@ -292,40 +248,6 @@ By accessing the website, you confirm your acceptance to privacy policy.
         }
       )
         wow.init();
-    </script>
-
-
-    <script>
-      $(document).ready(function() {
-        //Set the carousel options
-        $('#quote-carousel').carousel({
-          pause: true,
-          interval: 4000,
-        }
-                                     );
-      }
-                       );
-
-      // //google map
-      // function initialize() {
-      //   var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
-      //   var mapOptions = {
-      //     zoom: 5,
-      //     center: myLatlng,
-      //     mapTypeId: google.maps.MapTypeId.ROADMAP
-      //   }
-      //       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-      //   var marker = new google.maps.Marker({
-      //     position: myLatlng,
-      //     map: map,
-      //     title: 'Contact'
-      //   }
-      //                                      );
-      // }
-      // google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
     </script>
 
   </body>

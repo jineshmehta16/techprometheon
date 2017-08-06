@@ -4,6 +4,10 @@
     
 }
 
+.submit-button
+{
+    margin-bottom: 20px;
+}
 
     /* Desktops and laptops ---------- */
   @media screen and (min-width: 1223px)

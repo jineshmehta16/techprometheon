@@ -41,6 +41,15 @@
     border-color: lightgreen;
   }
 
+  select.ng-invalid 
+  {
+    border-color: pink;
+  }
+  select.ng-valid 
+  {
+    border-color: lightgreen;
+  }
+
   textarea.ng-invalid 
   {
     border-color: pink;

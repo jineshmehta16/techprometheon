@@ -9,7 +9,7 @@ app.controller('productCtrl', function($scope, $http) {
 
      $scope.onSubmitProduct = function()
     {
-        if($scope.name == null || $scope.email == null || $scope.number == null)
+        if($scope.name == null || $scope.email == null || $scope.number == null || $scope.city ==null || $scope.purpose ==null)
         {
             $scope.errorMessage= "Please fill all the mandatory fields with asteric"
             $scope.messageClass="error";

@@ -9,6 +9,12 @@
     margin-bottom: 20px;
 }
 
+.google-play-store
+{
+    width: 238px;
+    margin-left: 107px;
+}
+
     /* Desktops and laptops ---------- */
   @media screen and (min-width: 1223px)
   {

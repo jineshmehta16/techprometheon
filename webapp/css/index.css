@@ -59,8 +59,35 @@
   }
 
 
-  .mainImage
+
+
+  .h-service .hyperlink
   {
-    height: 570px;
-    width: 100%;
+    color: blue;
+    font-weight: bold;
   }
+
+
+
+
+
+  
+    /* Desktops and laptops ---------- */
+  @media screen and (min-width: 1223px)
+  {
+    .mainImage
+    {
+      height: 560px;
+      width: 100%;
+    }
+  }
+
+   /* Smartphones (landscape) ---------- */
+@media screen and (min-width: 319px) and (max-width: 1022px)
+{
+    .mainImage
+    {
+      height: 445px;
+      width: 100%;
+    } 
+}

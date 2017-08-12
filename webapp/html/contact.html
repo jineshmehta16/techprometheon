@@ -54,21 +54,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-               <a href="../index.html"><img src="../asset/images/logo.png" class="logo" alt="Logo">
-                <a class="navbar-brand nav-logo" href="../index.html">Tech <span>Prometheon</span>
+               <a href="../home.html"><img src="../asset/images/logo.png" class="logo" alt="Logo">
+                <a class="navbar-brand nav-logo" href="../home.html">Tech <span>Prometheon</span>
                 </a>
               </a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="../index.html">Home</a>
+                    <a href="../home.html">Home</a>
                 </li>
                 <li>
-                    <a href="../index.html">Product</a>
+                    <a href="../home.html">Product</a>
                 </li>
                 <li>
-                    <a href="../index.html">Offerings</a>
+                    <a href="../home.html">Offerings</a>
                 </li>
                 <li>
                     <a href="faq.html">Support/FAQ</a>
@@ -95,7 +95,7 @@
           <div class="col-lg-8 col-sm-8">
             <ol class="breadcrumb pull-right">
               <li>
-                <a href="../index.html">
+                <a href="../home.html">
                   Home
                 </a>
               </li>
@@ -163,15 +163,11 @@
               <div class="form-group">
                 <label for="name">Name*</label>
               <input type="text" name="name" ng-model="name"  class="form-control" required>
-              <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
-              <span ng-show="contactForm.name.$error.required">Username is required.</span>
-              </span>
               </div>
             <div class="form-group">
                <label for="email">Email*</label>
               <input class="form-control" type="email" name="email" ng-model="email" required>
               <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">	
-              <span ng-show="contactForm.email.$error.required">Email is required.</span>
               <span ng-show="contactForm.email.$error.email">Invalid email address.</span>
               </span>
             </div>
@@ -179,9 +175,6 @@
             <div class="form-group">
                <label for="phone">Phone*</label>
               <input class="form-control" type="number" name="number" ng-model="number" required>
-              <span style="color:red" ng-show="contactForm.number.$dirty && contactForm.number.$invalid">	
-              <span ng-show="contactForm.number.$error.required">Number is required.</span>
-              </span>
             </div>
             <div class="form-group">
               <label for="message">
@@ -189,9 +182,6 @@
               </label>
               <textarea placeholder="" rows="5" name="message" ng-model="message" class="form-control" required>
               </textarea>
-              <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">	
-              <span ng-show="contactForm.message.$error.required">Message is required.</span>
-              </span>
             </div>
               <input style="width: 20%" ng-disabled="contactForm.name.$dirty && contactForm.name.$invalid ||
                                   contactForm.email.$dirty && contactForm.email.$invalid ||
@@ -220,7 +210,7 @@
               <ul class="page-footer-list">
                 <li>
                   <i class="fa fa-angle-right"></i>
-                  <a href="index.html">Home</a>
+                  <a href="home.html">Home</a>
                 </li>
                 <li>
                   <i class="fa fa-angle-right"></i>

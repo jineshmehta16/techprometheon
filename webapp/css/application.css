@@ -59,6 +59,12 @@
     border-color: lightgreen;
   }
 
+  .hyperlink
+  {
+    color: blue;
+    font-weight: bold;
+  }
+
   input
   {
     width: 100%; 
